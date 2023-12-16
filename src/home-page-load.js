@@ -1,28 +1,27 @@
-function loadHomePage() {
+function loadHomePage(container) {
+    container.innerHTML = "";
+
     let homePageContainer = document.createElement("div");
 
     let homePageTitle = document.createElement("h1");
     homePageTitle.textContent = "Coolest Restaurant Ever";
 
-    let homePageAbout = document.createElement("div");
+    let homePageAboutContainer = document.createElement("div");
     let homePageAboutTitle = document.createElement("h2");
+    let homePageAboutInfo = document.createElement("p");
     homePageAboutTitle.textContent = "About";
-    homePageAbout.textContent = "It's just the best!";
-    homePageAbout.append(homePageAboutTitle);
+    homePageAboutInfo.textContent = "It's just the best!";
+    homePageAboutContainer.append(homePageAboutTitle, homePageAboutInfo);
 
-    let homePageHours = document.createElement("div");
+    let homePageHoursContainer = document.createElement("div");
     let homePageHoursTitle = document.createElement("h2");
+    let homePageHoursInfo = document.createElement("p");
     homePageHoursTitle.textContent = "Hours";
-    homePageHours.textContent = "24/7 all day every day forever!";
-    homePageHours.append(homePageHoursTitle);
+    homePageHoursInfo.textContent = "24/7 all day every day forever!";
+    homePageHoursContainer.append(homePageHoursTitle, homePageHoursInfo);
 
-    let homePageLocation = document.createElement("div");
-    let homePageLocationTitle = document.createElement("h2");
-    homePageLocationTitle.textContent = "Location";
-    homePageLocation.textContent = "Wherever you are now!";
-    homePageLocation.append(homePageLocationTitle);
-
-    homePageContainer.append(homePageTitle, homePageAbout, homePageHours, homePageLocation);
+    homePageContainer.append(homePageTitle, homePageAboutContainer, homePageHoursContainer);
+    container.appendChild(homePageContainer);
 }
 
 export { loadHomePage };

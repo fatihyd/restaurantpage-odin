@@ -1,4 +1,6 @@
-function loadMenuPage() {
+function loadMenuPage(container) {
+    container.innerHTML = "";
+
     let menuPageContainer = document.createElement("div");
 
     let menuPageTitle = document.createElement("h1");
@@ -12,6 +14,7 @@ function loadMenuPage() {
     iceCreamContainer.append(iceCreamTitle, iceCreamImage);
 
     menuPageContainer.append(menuPageTitle, iceCreamContainer);
+    container.appendChild(menuPageContainer);
 }
 
 export { loadMenuPage };

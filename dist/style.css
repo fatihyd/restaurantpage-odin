@@ -1,5 +1,20 @@
-#content {
+body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: lightblue;
+}
+
+button {
+    background-color: orange;
+    width: 150px;
+    height: 80px;
+}
+
+#content div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
